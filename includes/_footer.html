@@ -1,0 +1,23 @@
+	<div class="row" id="footer">
+		<div class="w12">
+			<p><!-- $title --> | Scoop &mdash; Final Year Project Documentation &mdash; Sam Lester, 0913313</p>
+			<p>There are <span class="wordcount"></span> words in this chapter. It'll take approximately <span class="readingtime"></span> minutes to read.</p>
+		</div>
+	</div>
+
+	<script>
+
+	$(document).ready(function() {
+		var wordcount = $('.section').text().split(' ').length;
+		var readingtime = Math.round(wordcount / 200);
+		
+		$('.wordcount').html(wordcount);
+		$('.readingtime').html(readingtime);
+	});
+
+	</script>
+
+</div><!-- /container -->
+
+</body>
+</html>
