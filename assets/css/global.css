@@ -73,6 +73,8 @@ a:hover{text-decoration: underline; color: #21688a;}
 
 #footer p {font-size: 14px;}
 
+img {display: block; margin-top: 20px; margin-bottom: 20px;}
+
 table {width: 100%; border: 1px solid #cccccc; margin-top: 10px; margin-bottom: 10px;}
 tr {}
 th, td {padding: 5px 10px; text-align: left; border: 1px solid #cccccc;}
