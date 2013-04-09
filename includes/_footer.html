@@ -8,7 +8,10 @@
 	<script>
 
 	$(document).ready(function() {
-		var wordcount = $('.section').text().split(' ').length;
+
+		$('a[href^="http"]').addClass('external-link').attr('target','_blank');
+
+		var wordcount = $('.section').children().not('pre').text().split(' ').length;
 		var readingtime = Math.round(wordcount / 200);
 		
 		$('.wordcount').html(wordcount);

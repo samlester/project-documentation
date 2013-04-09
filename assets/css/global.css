@@ -13,18 +13,29 @@ html,button{-webkit-font-smoothing:antialiased;}
 body{color:#404040; font-size:17px; line-height: 1.5; background-color:#fff; font-family:"Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
 
 
+/* --- FONTS --- */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/glyphiconshalflings-regular.eot');
+  src: url('../fonts/glyphiconshalflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphiconshalflings-regular.woff') format('woff'), url('../fonts/glyphiconshalflings-regular.ttf') format('truetype'), url('../fonts/glyphiconshalflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
 /* --- UTILITY --- */
 
 .invisible{position:absolute; left:-999em;} /* Can be seen by screen readers */
 .removed{display:none;}
 
-.float-left{float:left;}
-.float-right{float:right;}
 .clear{clear:both;}
 .relative{position:relative;}
 
 .clearfix{zoom:1;}
 .clearfix:after{display:block; content:''; clear:both; height:0;}
+
+.pull-left {float:left; margin: 0 40px 20px 0; width: 50%;}
+.pull-right {float:right; margin: 0 0 20px 40px; width: 50%;}
 
 
 /* --- TYPOGRAPHY --- */
@@ -46,6 +57,12 @@ strong {font-weight: bold;}
 .section ol {list-style:decimal outside none;}
 .section li {margin-left: 30px; margin-bottom: 2px;}
 
+ol.contents li {list-style-type: none; margin-left: 0;}
+.contents li span {display: inline-block;width: 20px;}
+.contents li ol span {width: 35px;}
+.contents li a{margin-bottom: 8px;}
+.contents ol {margin-left: 20px;}
+
 /* --- NAVIGATION --- */
 
 #nav {padding-bottom: 0; padding-top: 10px;}
@@ -62,24 +79,33 @@ strong {font-weight: bold;}
 a{-webkit-transition:color 0.2s; -moz-transition:color 0.2s; transition:color 0.2s; color: #35a8df; text-decoration:none;}
 a:hover{text-decoration: underline; color: #21688a;}
 
+.external-link:after {content: "\e095"; font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  line-height: 1; font-size: 12px; margin-left: 3px;}
+
 .container {border-top: 10px solid #35a8df;}
 .row {padding-top: 40px; padding-bottom: 40px;}
-.section {border-top: 1px solid #cbcbcb; padding-top: 10px; margin-bottom: 40px; display:block;}
+.section {border-top: 1px solid #cbcbcb; padding-top: 10px; margin-bottom: 40px; display:block; overflow: hidden;}
 
 .row > div > .section:first-child {border-top: 0;}
 
-.next-part {display:block; width: 100%; color: #fff; background-color: #35a8df; padding: 10px 20px; text-align: center; margin-top: 20px;}
+.next-part {display:block; width: 100%; color: #fff; background-color: #35a8df; padding: 10px 20px; text-align: center; margin-top: 20px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 .next-part:hover {background-color: #21688a; color: #fff; text-decoration:none;}
 
 #footer p {font-size: 14px;}
 
-img {display: block; margin-top: 20px; margin-bottom: 20px;}
+img {display: block; margin-top: 5px; margin-bottom: 5px;}
+figure figcaption {font-size: 15px;}
 
 table {width: 100%; border: 1px solid #cccccc; margin-top: 10px; margin-bottom: 10px;}
 tr {}
 th, td {padding: 5px 10px; text-align: left; border: 1px solid #cccccc;}
 th {background-color: #f3f3f3; font-weight: bold;}
 
+pre {padding: 20px !important; margin: 20px 0 !important; display:block;}
+
+.note {width: 30%; background-color: #eeeeee; padding: 20px; font-size: 15px; border: 1px solid #cbcbcb; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.note h2 {font-size: 20px; margin-top: 0;}
 
 /* --- WYSIWYG --- */
 
