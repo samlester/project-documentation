@@ -34,9 +34,6 @@ body{color:#404040; font-size:17px; line-height: 1.5; background-color:#fff; fon
 .clearfix{zoom:1;}
 .clearfix:after{display:block; content:''; clear:both; height:0;}
 
-.pull-left {float:left; margin: 0 40px 20px 0; width: 50%;}
-.pull-right {float:right; margin: 0 0 20px 40px; width: 50%;}
-
 
 /* --- TYPOGRAPHY --- */
 
@@ -94,26 +91,30 @@ a:hover{text-decoration: underline; color: #21688a;}
 
 #footer p {font-size: 14px;}
 
-img {display: block; margin-top: 5px; margin-bottom: 5px;}
-figure figcaption {font-size: 15px;}
-
-table {width: 100%; border: 1px solid #cccccc; margin-top: 10px; margin-bottom: 10px;}
+table {width: 100%; border: 1px solid #cccccc; margin-top: 20px; margin-bottom: 20px; font-size: 16px;}
 tr {}
 th, td {padding: 5px 10px; text-align: left; border: 1px solid #cccccc;}
 th {background-color: #f3f3f3; font-weight: bold;}
 
 pre {padding: 20px !important; margin: 20px 0 !important; display:block;}
 
+p code {font-size: 14px; line-height: inherit; background-color: #f3f3f3; /* 0B1022 */ padding: 3px 5px 2px 5px; position:relative; top: -1px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+
+img {display: block; margin-top: 5px; margin-bottom: 5px;}
+
+figure {display:block; width: 100%; margin-bottom: 20px;}
+figure figcaption {font-size: 15px;}
+figure img {width: 100%;}
+
+figure.pull-left {float:left; margin-right: 40px; width: 50%;}
+figure.pull-right {float:right; margin-left: 40px; width: 50%;}
+
 .note {width: 30%; background-color: #eeeeee; padding: 20px; font-size: 15px; border: 1px solid #cbcbcb; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 .note h2 {font-size: 20px; margin-top: 0;}
 
-/* --- WYSIWYG --- */
-
-.wysiwyg ul,
-.wysiwyg ol{padding-left:1.5em;}
-.wysiwyg ul li{list-style:disc outside;}
-.wysiwyg ol li{list-style:decimal outside;}
-.wysiwyg p{margin:1.5em;}
+.cite {background-color: red; display: inline-block; height: 10px; width: 10px;}
+.more {background-color: green; display: inline-block; height: 10px; width: 10px;}
+.revise {background-color: yellow;}
 
 
 /* --- SMALLER SCREENS --- */
