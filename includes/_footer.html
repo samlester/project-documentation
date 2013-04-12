@@ -9,8 +9,10 @@
 
 	$(document).ready(function() {
 
+		// Add class to external links
 		$('a[href^="http"]').addClass('external-link').attr('target','_blank');
 
+		// Find word count and reading time
 		var wordcount = $('.section').children().not('pre').text().split(' ').length;
 		var readingtime = Math.round(wordcount / 200);
 		

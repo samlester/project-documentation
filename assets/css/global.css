@@ -34,6 +34,9 @@ body{color:#404040; font-size:17px; line-height: 1.5; background-color:#fff; fon
 .clearfix{zoom:1;}
 .clearfix:after{display:block; content:''; clear:both; height:0;}
 
+.pull-left {float:left; margin-right: 40px;}
+.pull-right {float:right; margin-left: 40px;}
+
 
 /* --- TYPOGRAPHY --- */
 
@@ -76,9 +79,7 @@ ol.contents li {list-style-type: none; margin-left: 0;}
 a{-webkit-transition:color 0.2s; -moz-transition:color 0.2s; transition:color 0.2s; color: #35a8df; text-decoration:none;}
 a:hover{text-decoration: underline; color: #21688a;}
 
-.external-link:after {content: "\e095"; font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  line-height: 1; font-size: 12px; margin-left: 3px;}
+.external-link:after {content: "\e095"; font-family: 'Glyphicons Halflings'; font-style: normal; line-height: 1; font-size: 12px; padding-left: 3px; padding-right: 1px;}
 
 .container {border-top: 10px solid #35a8df;}
 .row {padding-top: 40px; padding-bottom: 40px;}
@@ -98,7 +99,7 @@ th {background-color: #f3f3f3; font-weight: bold;}
 
 pre {padding: 20px !important; margin: 20px 0 !important; display:block;}
 
-p code {font-size: 14px; line-height: inherit; background-color: #f3f3f3; /* 0B1022 */ padding: 3px 5px 2px 5px; position:relative; top: -1px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+p code, li code {font-size: 14px; line-height: inherit; background-color: #f3f3f3; /* 0B1022 */ padding: 3px 5px 2px 5px; position:relative; top: -1px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 
 img {display: block; margin-top: 5px; margin-bottom: 5px;}
 
@@ -106,8 +107,7 @@ figure {display:block; width: 100%; margin-bottom: 20px;}
 figure figcaption {font-size: 15px;}
 figure img {width: 100%;}
 
-figure.pull-left {float:left; margin-right: 40px; width: 50%;}
-figure.pull-right {float:right; margin-left: 40px; width: 50%;}
+figure.pull-left, figure.pull-right {width: 50%;}
 
 .note {width: 30%; background-color: #eeeeee; padding: 20px; font-size: 15px; border: 1px solid #cbcbcb; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 .note h2 {font-size: 20px; margin-top: 0;}

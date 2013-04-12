@@ -15,11 +15,11 @@
 			<h3>Languages</h3>
 			<p>Theoretically the application could be written in many different languages. The usual choice for a project like this would be PHP due to it's high levels of adoption amongst the web community that means it's very easy to find solutions to potential problems. It was originally created by taking bits of syntax from three other languages (C, Java, and Perl) <span class="cite"></span> when I've previously used the language I've found it to be quite disorganised and on occasion, not very logical to use and understand.</p>
 			<p>Increasingly web apps are also created using JavaScript with the help of platforms like Node.js that can run scripts server-side, reducing the requirements of the user's computer. This was a tempting option as I already have a good understanding of Javascipt through my previous role as a front-end web developer.</p>
-			<p>In the end I decided to build the application using Ruby, one of a newer breed of languages have emerged to allow for the quicker and more efficient development of web applications. Languages liek Ruby and Python are built to be extremely fast and lightweight without all of the historical idiosyncrasies that come with older languages. <span class="cite"></span></p>
+			<p>In the end I decided to build the application using Ruby, one of a newer breed of languages have emerged to allow for the quicker and more efficient development of web applications. Languages like Ruby and Python are built to be extremely fast and lightweight without all of the historical idiosyncrasies that come with older languages. <span class="cite"></span></p>
 
 			<h3>Application frameworks</h3>
 			<p><span class="revise">An application framework is a preset structure which allows for the quicker development of an application. They generally contain all of the basic functions that a web application requires, saving the time of creating them for each new application. <span class="cite"></span> They also follow certain conventions so that developers can collaborate easily without having to learn a custom-built structure each time.</span></p>
-			<p>Having decided that Ruby is the best language choice for this project I will now look at the available application frameworks I could use during development.</p>
+			<p>Having decided that Ruby is the best language choice for this project I started looking at the available application frameworks I could use during development. Two main ones appeared</p>
 
 			<h3>Front-end frameworks</h3>
 			<p>Twitter Bootstrap is an open source front-end development framework that allows for the creation of the basic structure of  websites and web applications to be accomplished extremely quickly. It provides a large library of standard UI paradigms along with basic CSS and JavaScript to support them.</p>
@@ -32,9 +32,17 @@
 
 		<div class="section">
 			<h2>5.2 Using Ruby on Rails</h2>
-			
-			<h3>?</h3>
+			<p>Having decided that Ruby on Rails was the system that Scoop would be based upon I began researching and familiarising myself with the way that it works. This included following online tutorials from <a href="http://teamtreehouse.com/library/programming/build-a-simple-ruby-on-rails-application">Treehouse</a> and attending a <a href="https://generalassemb.ly/">General Assembly</a> workshop on getting started with Ruby</p>
+			<p><span class="more"></span></p>
 
+			<h3>Model–view–controller (MVC)</h3>
+			<p>Model–view–controller (more commonly known as MVC) is a software architecture pattern which aims to separate the presentation of content to the user with the back-end logic that processes data <span class="cite"></span>. Each part of MVC has it's own role to play in responding to a user's requests:</p>
+			<ul>
+				<li>Models contain the structure of the data within the application and the majority of the logic used to process data.</li>
+				<li>Views function only to present data to the user. They normally represent the interface of the application although the could be responsible for returning other formats.</li>
+				<li>Controllers bring the Models and Views together by fetching data from the Models and responding to user requests in the form of a View.</li>
+			</ul>
+			<p>Rails is entirely based around MVC <span class="more"></span>. One of the advantages of using Rails is that it can generate models, controllers and views from the command line. Together these components are called a scaffold and provide an extremely basic framework for passing data between the elements of MVC.</p>
 			
 			<h3>Gems</h3>
 			<p>Ruby uses a system of plugins called gems which allow developers to add additional functionality to their apps using <span class="cite"></span>. Rails is itself a gem as is the sqlite</p>
@@ -130,7 +138,6 @@
 					</tr>
 				</tbody>
 			</table>
-
 		</div>
 
 		<div class="section">
@@ -178,17 +185,89 @@ end</code></pre>
 
 		<div class="section">
 			<h2>5.X Crawl functionality</h2>
+			<p>The ability of the application to crawl a website is key to it's overall purpose and so it was one of the first pieces of functionality to be created.</p>
+			<figure>
+				<img src="http://i.ten4design.co.uk/1000x200&text=Crawl process">
+				<figcaption>Crawl process</figcaption>
+			</figure>
+			<p>Scoop's crawl functionality utilises four gems: <code>anemone</code>, <code>robotex</code>, <code>nokogiri</code> and <code>delayed_job</code></p>
+			<p>The crawl process begins at the point where the user enters the site name and url. When the form is submitted it calls the create method in the site controller:</p>
+			<pre><code data-language="ruby" data-line="1">def create
+  @site = Site.new(params[:site])
+
+  @site.user_id = current_user.id
+  @site.crawling = 1
+
+  doc = Nokogiri::HTML(open(@site.url))
+  if !doc.css('link[rel=apple-touch-icon], link[rel=apple-touch-icon-precomposed]').blank?()
+    @site.icon_remote_url = doc.css('link[rel=apple-touch-icon], link[rel=apple-touch-icon-precomposed]')[0]["href"]
+  else
+    @site.icon_remote_url = nil
+  end 
+
+  respond_to do |format|
+    if @site.save
+      @site.crawl
+      format.html { redirect_to @site, notice: 'Site was successfully created.' }
+      format.json { render json: @site, status: :created, location: @site }
+    else
+      format.html { render action: "new" }
+      format.json { render json: @site.errors, status: :unprocessable_entity }
+    end
+  end
+end</code></pre>
+			<ol>
+				<li>The POST data from the form is retrieved an placed inside the <code>@site</code> object.</li>
+				<li>The current user's id and crawl status are added to the object.</li>
+				<li>The site's homepage HTML is retrieved using <code>open</code> and prepared for <code>nokogiri</code>.</li>
+				<li>A conditional statement checks if the page has an Apple touch icon. If so, it is retrieved and attached to the site object. If not, <code>nil</code> is entered instead.</li>
+				<li><code>@site</code> is saved if the method was executed successfully.</li>
+				<li><code>@site</code> is passed to the crawl method.</li>
+				<li>The site view is returned with a notification message.</li>
+			</ol>
+			<p>At this point the user sees the site page with a progress indicator. The site is now in a queue to be processed using Delayed Job. The version of delayed job used in Scoop puts the queued items into a database table where they can be accessed by other methods without action from the user.</p>
+			<p>The crawl method exists within the site model and is carried out as a background task:</p>
+
+			<pre><code data-language="ruby" data-line="1">def crawl
+  Anemone.crawl(url) do |anemone|
+    anemone.on_every_page do |page|
+      begin
+        doc = Nokogiri::HTML(open(page.url))
+        title = doc.css('title').inner_text
+        url = page.url.path
+        Page.create(:title=>title,:url=>url,:site_id=>id)
+      rescue OpenURI::HTTPError => ex
+
+      end 
+    end
+  end
+
+  @site = Site.find(id)
+  @site.crawling = false
+  @site.save!
+end
+handle_asynchronously :crawl</code></pre>
+			<ol>
+				<li><code>Anemone</code> is called and passed the url of the site to be crawled.</li>
+				<li>Each page on the site is retrieved using <code>open</code> and prepared for <code>nokogiri</code>.</li>
+				<li>The <code>title</code> element is retrieved and saved as a variable.</li>
+				<li>The path of each page is retrieved and saved as a variable.</li>
+				<li>The retrieved information is saved to the pages table in the database.</li>
+				<li>If HTTP errors are encountered (e.g. 404: Page not found, 401: Unauthorized) the page is skipped.</li>
+			</ol>
+			<p>This method </p>
 		</div>
 
 		<div class="section">
 			<h2>5.X Connecting to Google Analytics</h2>
+			<p>Originally the retrieval of Google Analytics data for each page was listed as a feature which</p>
 		</div>
 	
 		<div class="section">
 			<h2>5.X Google Charts</h2>
 		</div>
 		
-		<a class="next-part" href="<!-- @path -->">Part 5: Testing</a>
+		<a class="next-part" href="<!-- @path testing.html -->">Chapter 6: Testing</a>
 	</div>
 </div>
 
