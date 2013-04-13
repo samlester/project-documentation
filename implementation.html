@@ -3,12 +3,12 @@
 
 <div class="row">
 	<div class="w12">
-		<div class="section">
+		<section class="section">
 			<h1><!-- $title --></h1>
 			<p>In this chapter I will run through the process I took to create the application.</p>
-		</div>
+		</section>
 
-		<div class="section" id="technologies">
+		<section class="section" id="technologies">
 			<h2>5.1 Technologies</h2>
 			<p>Before starting to implement my application I went through the process of learning about various technologies that I could use to create the application including language, hosting, versioning and frameworks.</p>
 
@@ -28,10 +28,15 @@
 			<p>In a project as dynamic as this one it's important to keep track of bugs that occur as well as being able to roll back to previous versions of the software. There are a variety of software packages available to facilitate this.</p>
 			<p>Git is a versioning and Source Code Management (SCM) package which allows developers of applications to keep several revisions of their code.</p>
 			<p>Github is a web application (incidentally built on Ruby) which allows the publishing and sharing of Git repositories.</p>
-		</div>
+		</section>
 
-		<div class="section">
+		<section class="section" id="using-ruby-on-rails">
 			<h2>5.2 Using Ruby on Rails</h2>
+			<aside class="note pull-right">
+				<h2>Code repository</h2>
+				<p>The complete codebase of Scoop is available online through GitHub</p>
+				<a href="http://github.com/samlester/scoop">github.com/samlester/scoop</a>
+			</aside>
 			<p>Having decided that Ruby on Rails was the system that Scoop would be based upon I began researching and familiarising myself with the way that it works. This included following online tutorials from <a href="http://teamtreehouse.com/library/programming/build-a-simple-ruby-on-rails-application">Treehouse</a> and attending a <a href="https://generalassemb.ly/">General Assembly</a> workshop on getting started with Ruby</p>
 			<p><span class="more"></span></p>
 
@@ -61,93 +66,93 @@
 					<tr>
 						<td>simple_form</td>
 						<td>Creates and formats user input forms for Twitter Bootstrap</td>
-						<td>https://github.com/plataformatec/simple_form</td>
+						<td><a href="https://github.com/plataformatec/simple_form">https://github.com/plataformatec/simple_form</a></td>
 						<td>MIT</td>
 					</tr>
 					<tr>
 						<td>devise</td>
 						<td>Deals with user authentication (sign up/sign in, protected controllers)</td>
-						<td>https://github.com/plataformatec/devise</td>
+						<td><a href="https://github.com/plataformatec/devise">https://github.com/plataformatec/devise</a></td>
 						<td>MIT</td>
 					</tr>
 					<tr>
 						<td>nokogiri</td>
 						<td>Used to help parse HTML documents retrieved during the crawl process</td>
-						<td>https://github.com/sparklemotion/nokogiri</td>
+						<td><a href="https://github.com/sparklemotion/nokogiri">https://github.com/sparklemotion/nokogiri</a></td>
 						<td>MIT</td>
 					</tr>
 					<tr>
 						<td>robotex</td>
 						<td>Used to make anemone obey robots.txt when crawling sites</td>
-						<td>https://github.com/chriskite/robotex</td>
+						<td><a href="https://github.com/chriskite/robotex">https://github.com/chriskite/robotex</a></td>
 						<td>Custom (Open source)</td>
 					</tr>
 					<tr>
 						<td>anemone</td>
 						<td>Used to </td>
-						<td>https://github.com/chriskite/anemone</td>
+						<td><a href="https://github.com/chriskite/anemone">https://github.com/chriskite/anemone</a></td>
 						<td>Custom (Open source)</td>
 					</tr>
 					<tr>
 						<td>garb</td>
 						<td>Ruby wrapper for the Google Analytics API</td>
-						<td>https://github.com/Sija/garb</td>
+						<td><a href="https://github.com/Sija/garb">https://github.com/Sija/garb</a></td>
 						<td>MIT</td>
 					</tr>
 					<tr>
 						<td>paperclip</td>
 						<td>Manages file upload and storage</td>
-						<td>https://github.com/thoughtbot/paperclip</td>
+						<td><a href="https://github.com/thoughtbot/paperclip">https://github.com/thoughtbot/paperclip</a></td>
 						<td>MIT</td>
 					</tr>
 					<tr>
 						<td>certified</td>
 						<td>Solves a problem with SSL certification</td>
-						<td>https://github.com/stevegraham/certified</td>
+						<td><a href="https://github.com/stevegraham/certified">https://github.com/stevegraham/certified</a></td>
 						<td>-</td>
 					</tr>
 					<tr>
 						<td>omniauth</td>
-						<td></td>
-						<td>https://github.com/intridea/omniauth</td>
+						<td><span class="more"></span></td>
+						<td><a href="https://github.com/intridea/omniauth">https://github.com/intridea/omniauth</a></td>
 						<td>Custom (Open source)</td>
 					</tr>
 					<tr>
 						<td>omniauth-google-oauth2</td>
-						<td></td>
-						<td>https://github.com/zquestz/omniauth-google-oauth2</td>
+						<td><span class="more"></span></td>
+						<td><a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a></td>
 						<td>Custom (Open source)</td>
 					</tr>
 					<tr>
 						<td>delayed_job_active_record</td>
-						<td></td>
-						<td>https://github.com/collectiveidea/delayed_job_active_record</td>
+						<td><span class="more"></span></td>
+						<td><a href="https://github.com/collectiveidea/delayed_job_active_record">https://github.com/collectiveidea/delayed_job_active_record</a></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td>daemons</td>
-						<td></td>
-						<td>https://github.com/ghazel/daemons</td>
+						<td><span class="more"></span></td>
+						<td><a href="https://github.com/ghazel/daemons">https://github.com/ghazel/daemons</a></td>
 						<td>Custom (Open source)</td>
 					</tr>
 					<tr>
 						<td>google_visualr</td>
 						<td></td>
-						<td>https://github.com/winston/google_visualr</td>
+						<td><a href="https://github.com/winston/google_visualr">https://github.com/winston/google_visualr</a></td>
 						<td>MIT</td>
 					</tr>
 				</tbody>
 			</table>
-		</div>
+		</section>
 
-		<div class="section">
-			<h2>5.X Using Git</h2>
-			<p>Version control is </p>
+		<section class="section" id="using-git">
+			<h2>5.3 Using Git</h2>
+			<p>Version control is <span class="more"></span></p>
 			<p> <code>git status</code></p>
-		</div>
+		</section>
 
-		<div class="section">
-			<h2>5.X Creating and updating the database</h2>
+		<section class="section" id="creating-and-updating-the-database">
+			<h2>5.4 Creating and updating the database</h2>
 			<p>Rather than creating a database structure and then implementing it using a Database Management System (DBMS) as is standard when creating a system using PHP and MySQL Rails uses models to store information about the name, content and validation of various fields. The information from the models can then be implemented into any database system using a migration. Scoop uses the standard Rails system, SQLite.</p>
 			<p>Prior to creating the database</p>
 			<p>Changes to the database were made using individual migrations like the one below:</p>
@@ -181,16 +186,16 @@ end</code></pre>
 			<p>This extensive file describes all of the tables in the database similar to an SQL create file.</p>
 
 
-		</div>
+		</section>
 
-		<div class="section">
-			<h2>5.X Crawl functionality</h2>
+		<section class="section" id="crawl-functionality">
+			<h2>5.5 Crawl functionality</h2>
 			<p>The ability of the application to crawl a website is key to it's overall purpose and so it was one of the first pieces of functionality to be created.</p>
 			<figure>
 				<img src="http://i.ten4design.co.uk/1000x200&text=Crawl process">
 				<figcaption>Crawl process</figcaption>
 			</figure>
-			<p>Scoop's crawl functionality utilises four gems: <code>anemone</code>, <code>robotex</code>, <code>nokogiri</code> and <code>delayed_job</code></p>
+			<p>Scoop's crawl functionality utilises four gems; <code>anemone</code> to retrieve the URLs for the site; <code>robotex</code> to obey the robots.txt protocol; <code>nokogiri</code> to parse the document and <code>delayed_job_active_record</code> to store background jobs in the database and run them when required.</p>
 			<p>The crawl process begins at the point where the user enters the site name and url. When the form is submitted it calls the create method in the site controller:</p>
 			<pre><code data-language="ruby" data-line="1">def create
   @site = Site.new(params[:site])
@@ -255,17 +260,146 @@ handle_asynchronously :crawl</code></pre>
 				<li>The retrieved information is saved to the pages table in the database.</li>
 				<li>If HTTP errors are encountered (e.g. 404: Page not found, 401: Unauthorized) the page is skipped.</li>
 			</ol>
-			<p>This method </p>
-		</div>
+			<p>The crawl method is set to be run asynchronously using <code>handle_asynchronously :crawl</code>. This setup of Delayed Job allows almost any ruby method to be handled in the background without significant changes to the code.</p>
+		</section>
 
-		<div class="section">
-			<h2>5.X Connecting to Google Analytics</h2>
-			<p>Originally the retrieval of Google Analytics data for each page was listed as a feature which</p>
-		</div>
+		<section class="section" id="connecting-to-google-analytics">
+			<h2>5.6 Connecting to Google Analytics</h2>
+			<p>Originally the retrieval of Google Analytics data for each page was listed as a feature which was marked as nice to have rather than essential. As the project moved forward it became clear that analytical data about the page would be key in the user's decisions about how to categorise and comment on the content.</p>
+			<p>Google exposes it's API data after authentication through OAuth, an open source protocol created to make it simpler for developers to complete user authorisation processes so they can get access to data over HTTP <span class="cite"></span>.</p>
+			<p>Getting data in this way is a fairly involved process, requiring first an authentication stage where the user can confirm their details and grant privileges followed by token retrieval and finally calls to get the actual data for each page. To simplify the process Scoop uses four gems; <code>omniauth</code> and <code>omniauth-google-oauth2</code> for making the OAuth calls, <code>garb</code> for retrieving the analytics data and <code>delayed_job</code> for the background tasks.</p>
+			<figure>
+				<img src="">
+				<figcaption>The connection view</figcaption>
+			</figure>
+			<p>With Google's integration of the OAuth 2 standard the first step is to register an application using their <a href="#">API console</a> which controls external access to all of Google's services. Scoop was registered as requiring access to the Google Analytics API and was assigned an OAuth key and secret to use during the authentication process.</p>
+			<p>When a user</p>
+			<pre><code data-language="ruby" data-line="1">def new
+  omniauth = request.env["omniauth.auth"]
+  site_id = request.env["omniauth.params"]['site_id']
+
+  @connection = Connection.new
+
+  @connection.token = omniauth.credentials.token
+  @connection.refresh_token = omniauth.credentials.refresh_token
+  @connection.site_id = site_id
+
+  client = OAuth2::Client.new ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"],
+  {
+    :site => 'https://accounts.google.com',
+    :authorize_url => "/o/oauth2/auth",
+    :token_url => "/o/oauth2/token",
+  }
+  response = OAuth2::AccessToken.from_hash(client, :refresh_token => @connection.refresh_token).refresh!
+  Garb::Session.access_token = response
+
+  @accounts = Garb::Management::WebProperty.all
+
+  respond_to do |format|
+    format.html # new.html.erb
+    format.json { render json: @connection }
+  end
+end</code></pre>
+			<ol>
+				<li>The data returned from Google is stored in a variable along with the site ID.</li>
+				<li>The <code>@connection</code> object is created.</li>
+				<li>The tokem, refresh token and site ID are added to the <code>@connection</code> object.</li>
+				<li>A new authorisation request is created using the application's key and secret along with the user's refresh token.</li>
+				<li>The authorisation response is set as Garb's access token.</li>
+				<li>The user's Google analytics accounts are retrieved and stored in the <code>@accounts</code> object.</li>
+				<li>The view is sent to the user.</li>
+			</ol>
+			<p>After the user has authenticated with Google they are sent to a page so they can select a Google Analytics profile to assoacite the Scoop project to. While this process could potentially be carried out automatically it would rely heavily on assumptions about the user's Google Analytics setup. <span class="more"></span></p>
+			<figure>
+				<img src="assets/images/implementation/select-account.jpg">
+				<figcaption>Connection view</figcaption>
+			</figure>
+			<p>After the user has selected a profile the connection is saved to the database and a background method is called in the same way as with the initial site crawl above. While the analytics data request doesn't take as long as the site crawl it's good practice to run any task that accesses and external service in the background as <span class="more"></span> <span class="cite"></span></p>
+			<pre><code data-language="ruby" data-line="1">def get_data
+  @pages = Page.where("site_id = ?", site_id)
+  
+  client = OAuth2::Client.new ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"],
+  {
+    :site => 'https://accounts.google.com',
+    :authorize_url => "/o/oauth2/auth",
+    :token_url => "/o/oauth2/token",
+  }
+  response = OAuth2::AccessToken.from_hash(client, :refresh_token => refresh_token).refresh!
+  Garb::Session.access_token = response
+
+  profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == account}
+
+  @pages.each do |page|
+    @stats = Stats.results(profile, :filters => {:page_path.eql => page.url})
+    Page.update( page.id, :visitors => @stats.map(&:visitors).first.to_i )
+    Page.update( page.id, :pageviews => @stats.map(&:pageviews).first.to_i )
+    Page.update( page.id, :average_visit_time => @stats.map(&:avgTimeOnPage).first.to_s )
+  end  
+end
+handle_asynchronously :get_data</code></pre>
+			<ol>
+				<li>The set of pages to get data for is retrieved using a database query and saved to the <code>@pages</code> object.</li>
+				<li>A new authorisation request is created using the application's key and secret along with the user's refresh token.</li>
+				<li>The authorisation response is set as Garb's access token.</li>
+				<li>The profile that the user selected is set as the profile variable.</li>
+				<li>The API is queried for each of the pages in the <code>@pages</code> object</li>
+				<li>Each page is updated with the results retrieved from Google Analytics.</li>
+			</ol>
+			<p>Data is retrieved per page and is available to the user as soon as the call is complete.</p>
+		</section>
 	
-		<div class="section">
-			<h2>5.X Google Charts</h2>
-		</div>
+		<section class="section" id="google-charts">
+			<h2>5.7 Google Charts</h2>
+			<p>Graphs and charts tend to convey data in a much more engaging way than text so ..</p>
+			<p>Creating charts for the web using dynamic data is a speicalised task so prior to development I spent some time searching for a charting library that would fit the requirements of the application. Scoop uses the Google Chart library through a Ruby gem called <code>google_visualr</code> which acts as an interface to the javascript based. This solution was chosen because it allowed for all the chart generation code to be written in the Ruby-based controller rather than having to pass data through to a front-end script.</p>
+			<p>The following code sample is used to generate the progress-bar style chart on the sites page of Scoop. It shows a breakdown of the content status of each page and exists in the sites controller:</p>
+			<pre><code data-language="ruby" data-line="1">@pages = Page.where("site_id = ?", params[:id])
+
+chart_data = GoogleVisualr::DataTable.new
+
+chart_data.new_column('string', '')
+chart_data.new_column('number', 'Redundant') 
+chart_data.new_column('number', 'Out-of-date') 
+chart_data.new_column('number', 'Trivial') 
+chart_data.new_column('number', 'Good') 
+chart_data.new_column('number', 'Not analysed') 
+
+chart_data.add_rows(1)
+chart_data.set_cell(0, 0, 'Pages')
+chart_data.set_cell(0, 1, @pages.where("content_status = ?", 'Redundant').count)
+chart_data.set_cell(0, 2, @pages.where("content_status = ?", 'Out-of-date').count)
+chart_data.set_cell(0, 3, @pages.where("content_status = ?", 'Trivial').count)
+chart_data.set_cell(0, 4, @pages.where("content_status = ?", 'Good').count)
+chart_data.set_cell(0, 5, @pages.where("content_status IS NULL OR content_status = ''").count)
+
+options = {
+  :isStacked => true,
+  :width => '100%',
+  :height => 60,
+  :titlePosition => 'none',
+  :backgroundColor => 'transparent',
+  :legend => { position: 'none'},
+  series: [{color: '#237094'}, {color: '#2b89b6'}, {color: '#35a8df'}, {color: '#3ab9f5'}, {color: '#dddddd'}],
+  vAxis: { textPosition: 'none', gridlines: { count: 0 }, baselineColor: 'transparent' },
+  hAxis: { textPosition: 'none', gridlines: { count: 0 }, baselineColor: 'transparent' },
+  chartArea:{ left: 0, top: 0, width: '100%', height: '100%'},
+}
+
+@chart = GoogleVisualr::Interactive::BarChart.new(chart_data, options)</code></pre>
+			<ol>
+				<li>The pages on the current site are retrieved from the database.</li>
+				<li>A new instance of the <code>GoogleVisualr::DataTable</code> method is initialised and assigned to the <code>chart_data</code> variable.</li>
+				<li>Six columns are added to the table for each of the values we want displayed on the chart.</li>
+				<li>A row is added and values are assigned to each cell using a database query.</li>
+				<li>Options for how the chart is to be displayed are added to a variable called <code>options</code>. This includes the placement of the chart, visible axis and colours.</li>
+				<li>The bar chart is generated using <code>chart_data</code> and <code>options</code> variables and save to the chart object.</li>
+			</ol>
+		</section>
+
+		<section class="section" id="#">
+			<h2>5.8 Conclusion</h2>
+			<p>Hello.</p>
+		</section>
 		
 		<a class="next-part" href="<!-- @path testing.html -->">Chapter 6: Testing</a>
 	</div>
