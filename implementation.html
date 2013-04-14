@@ -10,24 +10,27 @@
 
 		<section class="section" id="technologies">
 			<h2>5.1 Technologies</h2>
-			<p>Before starting to implement my application I went through the process of learning about various technologies that I could use to create the application including language, hosting, versioning and frameworks.</p>
+			<p><span class="review" reason="I">Before starting to implement my application I went through the process of learning about various technologies that I could use to create the application including language application frameworks and versioning.</span></p>
 
 			<h3>Languages</h3>
-			<p>Theoretically the application could be written in many different languages. The usual choice for a project like this would be PHP due to it's high levels of adoption amongst the web community that means it's very easy to find solutions to potential problems. It was originally created by taking bits of syntax from three other languages (C, Java, and Perl) <span class="cite"></span> when I've previously used the language I've found it to be quite disorganised and on occasion, not very logical to use and understand.</p>
-			<p>Increasingly web apps are also created using JavaScript with the help of platforms like Node.js that can run scripts server-side, reducing the requirements of the user's computer. This was a tempting option as I already have a good understanding of Javascipt through my previous role as a front-end web developer.</p>
+			<p>Theoretically the application could be written in many different languages. The usual choice for a project like this would be PHP due to it's high levels of adoption amongst the web community that means it's very easy to find solutions to potential problems. It was originally created by taking bits of syntax from three other languages (C, Java, and Perl) <span class="cite"></span> and when I've previously used the language I've found it to be quite disorganised and on occasion, not very logical to use and understand.</p>
+			<p>Increasingly web apps are also created using JavaScript with the help of platforms like Node.js <span class="cite"></span> that can run scripts server-side, reducing the requirements of the user's computer. This was a tempting option as I already have a good understanding of Javascipt through my previous role as a front-end web developer. The approach does however present problems of its own.</p>
 			<p>In the end I decided to build the application using Ruby, one of a newer breed of languages have emerged to allow for the quicker and more efficient development of web applications. Languages like Ruby and Python are built to be extremely fast and lightweight without all of the historical idiosyncrasies that come with older languages. <span class="cite"></span></p>
 
 			<h3>Application frameworks</h3>
-			<p><span class="revise">An application framework is a preset structure which allows for the quicker development of an application. They generally contain all of the basic functions that a web application requires, saving the time of creating them for each new application. <span class="cite"></span> They also follow certain conventions so that developers can collaborate easily without having to learn a custom-built structure each time.</span></p>
-			<p>Having decided that Ruby is the best language choice for this project I started looking at the available application frameworks I could use during development. Two main ones appeared</p>
+			<p>An application framework is a preset structure which allows for the quicker development of an application. They generally contain all of the basic functions that a web application requires such as routing, Using a framework saves the time a developer would take to creating basic features for each new application and also allow for easier collaboration between multiple developers by following certain conventions so that developers don't have to learn a custom-built structure each time.</p>
+			<p>There are two frameworks commonly used for Ruby although they vary </p>
+			<p><a href="http://www.sinatrarb.com/">Sinatra</a> is</p>
+			<p>Ruby on Rails is a much more comprehensive application framework and</p>
 
 			<h3>Front-end frameworks</h3>
-			<p>Twitter Bootstrap is an open source front-end development framework that allows for the creation of the basic structure of  websites and web applications to be accomplished extremely quickly. It provides a large library of standard UI paradigms along with basic CSS and JavaScript to support them.</p>
+			<p>Front-end (HTML and CSS) frameworks are commonly used in web applications for similar reasons to application frameworks; to provide easier collaboration between multiple developers and to provide more separation between design and functionality. For example a developer could build a complete application based only on wireframes before a designer builts on top of the framework with CSS. This is standard practice in industry and is the way that Scoop should be developed.</p>
+			<p>Twitter Bootstrap is an open source front-end development framework that allows for the creation of the basic structure of websites and web applications to be accomplished extremely quickly. It provides a large library of standard UI paradigms like horizontal navigation, button types and ? along with basic CSS and JavaScript to support them. Bootstrap is widely used by the developer community and it's not uncommon to see it's distinctive button style across the web. The new version of Bootstrap (3.0) is currently being developed but in order to ensure that the <span class="more"></span></p>
 
 			<h3>Versioning</h3>
-			<p>In a project as dynamic as this one it's important to keep track of bugs that occur as well as being able to roll back to previous versions of the software. There are a variety of software packages available to facilitate this.</p>
-			<p>Git is a versioning and Source Code Management (SCM) package which allows developers of applications to keep several revisions of their code.</p>
-			<p>Github is a web application (incidentally built on Ruby) which allows the publishing and sharing of Git repositories.</p>
+			<p>In a project as complex as this one it's important to keep track of bugs that occur as well as being able to roll back to previous versions of the software. There are a variety of software packages available to facilitate this.</p>
+			<p>When working on web applications in the past I've used Subversion (svn), a versioning tool which has <span class="more"></span></p>
+			<p>Git is a versioning and Source Code Management (SCM) package which allows developers of applications to keep several revisions of their code. It is commonly used with Github, a web application (incidentally built on Ruby) which allows the publishing and sharing of Git repositories online in either a private or public way.</p>
 		</section>
 
 		<section class="section" id="using-ruby-on-rails">
@@ -147,13 +150,14 @@
 
 		<section class="section" id="using-git">
 			<h2>5.3 Using Git</h2>
-			<p>Version control is <span class="more"></span></p>
-			<p> <code>git status</code></p>
+			<p>Git allow the project to exist <span class="more"></span>. GitHub provides a GUI client for their service but for the duration of the project the command line will be used for all actions. After browsing to the required folder using <code>cd</code> a new git repository can be set up using <code>git init</code> and the project files can be added using <code>git add .</code></p>
+			<pre>Code.</pre>
+			<p>At various times during the project it's been necessary to </p>
 		</section>
 
 		<section class="section" id="creating-and-updating-the-database">
 			<h2>5.4 Creating and updating the database</h2>
-			<p>Rather than creating a database structure and then implementing it using a Database Management System (DBMS) as is standard when creating a system using PHP and MySQL Rails uses models to store information about the name, content and validation of various fields. The information from the models can then be implemented into any database system using a migration. Scoop uses the standard Rails system, SQLite.</p>
+			<p>Rather than creating a database structure and then implementing it using a Database Management System (DBMS) as is standard when creating a system using PHP and MySQL Rails uses models to store information about the name, content and validation of various fields. <span class="cite"></span> The information from the models can then be implemented into any database system using a migration. Scoop uses the standard Rails system, SQLite. <span class="more"></span></p>
 			<p>Prior to creating the database</p>
 			<p>Changes to the database were made using individual migrations like the one below:</p>
 			<pre><code data-language="ruby" data-line="1">class AddCrawlStatusToSites < ActiveRecord::Migration
@@ -163,7 +167,7 @@
 end</code></pre>
 			<p>This simple migration adds a new column (crawling) to the sites table with the boolean type. The changes outlined in the migration can then be made to the database using this command:</p>
 			<pre><code data-language="shell" data-line="1">$ rake db:migrate</code></pre>
-			<p>At any time the complete database structure can be found in the <code>db/schema.rb</code> file:</p>
+			<p>At any time the complete database structure can be found in the <a href="https://github.com/samlester/scoop/blob/master/db/schema.rb">db/schema.rb</a> file. The code below is a shortened version of the file showing the create command for the sites</p>
 			<pre><code data-language="ruby" data-line="1">ActiveRecord::Schema.define(:version => 20130409221522) do
 
 	create_table "sites", :force => true do |t|
@@ -273,7 +277,7 @@ handle_asynchronously :crawl</code></pre>
 				<figcaption>The connection view</figcaption>
 			</figure>
 			<p>With Google's integration of the OAuth 2 standard the first step is to register an application using their <a href="#">API console</a> which controls external access to all of Google's services. Scoop was registered as requiring access to the Google Analytics API and was assigned an OAuth key and secret to use during the authentication process.</p>
-			<p>When a user</p>
+			<p>When a user <span class="more"></span></p>
 			<pre><code data-language="ruby" data-line="1">def new
   omniauth = request.env["omniauth.auth"]
   site_id = request.env["omniauth.params"]['site_id']
@@ -310,10 +314,6 @@ end</code></pre>
 				<li>The view is sent to the user.</li>
 			</ol>
 			<p>After the user has authenticated with Google they are sent to a page so they can select a Google Analytics profile to assoacite the Scoop project to. While this process could potentially be carried out automatically it would rely heavily on assumptions about the user's Google Analytics setup. <span class="more"></span></p>
-			<figure>
-				<img src="assets/images/implementation/select-account.jpg">
-				<figcaption>Connection view</figcaption>
-			</figure>
 			<p>After the user has selected a profile the connection is saved to the database and a background method is called in the same way as with the initial site crawl above. While the analytics data request doesn't take as long as the site crawl it's good practice to run any task that accesses and external service in the background as <span class="more"></span> <span class="cite"></span></p>
 			<pre><code data-language="ruby" data-line="1">def get_data
   @pages = Page.where("site_id = ?", site_id)
