@@ -3,59 +3,58 @@
 
 <div class="row">
 	<div class="w12">
-		<section class="section">
+		<header class="section">
 			<h1><!-- $title --></h1>
-			<p>In this chapter I will run through the process I took to create the application.</p>
-		</section>
+		</header>
 
 		<section class="section" id="technologies">
 			<h2>5.1 Technologies</h2>
-			<p><span class="review" reason="I">Before starting to implement my application I went through the process of learning about various technologies that I could use to create the application including language application frameworks and versioning.</span></p>
+			<p>Before starting the build I went through the process of learning about various technologies that could be used to create the application including language, application frameworks and versioning.</p>
 
 			<h3>Languages</h3>
-			<p>Theoretically the application could be written in many different languages. The usual choice for a project like this would be PHP due to it's high levels of adoption amongst the web community that means it's very easy to find solutions to potential problems. It was originally created by taking bits of syntax from three other languages (C, Java, and Perl) <span class="cite"></span> and when I've previously used the language I've found it to be quite disorganised and on occasion, not very logical to use and understand.</p>
-			<p>Increasingly web apps are also created using JavaScript with the help of platforms like Node.js <span class="cite"></span> that can run scripts server-side, reducing the requirements of the user's computer. This was a tempting option as I already have a good understanding of Javascipt through my previous role as a front-end web developer. The approach does however present problems of its own.</p>
-			<p>In the end I decided to build the application using Ruby, one of a newer breed of languages have emerged to allow for the quicker and more efficient development of web applications. Languages like Ruby and Python are built to be extremely fast and lightweight without all of the historical idiosyncrasies that come with older languages. <span class="cite"></span></p>
+			<p>Theoretically the application could be written in many different languages. The usual choice for a project like this would be PHP due to it's high level of adoption amongst the web community that means it's very easy to find solutions to potential problems. Before it's creation in 1995 dynamic code on the web was formed from either C or Perl, both traditional programming languages adapted for the web rather than created specifically for it (Hudson, P., 2006, p.1). In terms of age PHP is one of the older web-based languages and when I've previously it I've found it to be quite disorganised and on occasion, not very logical to use and understand.</p>
+			<p>Increasingly web apps are also created using JavaScript with the help of platforms like <a href="http://nodejs.org/">Node.js</a> that can run scripts server-side, reducing the requirements of the user's computer. This was a tempting option as I already have a good understanding of JavaScript through my previous role as a front-end web developer.</p>
+			<p>In the end I decided to build the application using Ruby, one of a newer breed of languages have emerged to allow for the quicker and more efficient development of web applications. Ruby is built to be extremely fast and lightweight without all of the historical idiosyncrasies that come with older languages (Hartl, M., 2012, p. 3).</p>
 
 			<h3>Application frameworks</h3>
-			<p>An application framework is a preset structure which allows for the quicker development of an application. They generally contain all of the basic functions that a web application requires such as routing, Using a framework saves the time a developer would take to creating basic features for each new application and also allow for easier collaboration between multiple developers by following certain conventions so that developers don't have to learn a custom-built structure each time.</p>
-			<p>There are two frameworks commonly used for Ruby although they vary </p>
-			<p><a href="http://www.sinatrarb.com/">Sinatra</a> is</p>
-			<p>Ruby on Rails is a much more comprehensive application framework and</p>
+			<p>An application framework is a preset structure which allows for the quicker development of an application. They generally contain all of the basic functions that a web application requires such as routing and templating. Using a framework saves the time a developer would take to create basic features for each new application and also allow for easier collaboration between multiple developers by following certain key conventions so that developers don't have to learn a custom-built structure each time.</p>
+			<p>The most commonly used Ruby framework is <a href="http://rubyonrails.org/">Ruby on Rails</a>, a powerful and comprehensive open source system which takes the view that there's a 'best way' to develop web application. Rails has a variety of guiding principles which ensure that applications are built to a set standard. These include; DRY (Don't Repeat Yourself), the idea that writing any code more that once is a bad idea and convention over configuration, the idea that it's better to work with Rails conventions than to have to specify configuration up front (Ruby on Rails Guides, 2010).</p>
 
 			<h3>Front-end frameworks</h3>
-			<p>Front-end (HTML and CSS) frameworks are commonly used in web applications for similar reasons to application frameworks; to provide easier collaboration between multiple developers and to provide more separation between design and functionality. For example a developer could build a complete application based only on wireframes before a designer builts on top of the framework with CSS. This is standard practice in industry and is the way that Scoop should be developed.</p>
-			<p>Twitter Bootstrap is an open source front-end development framework that allows for the creation of the basic structure of websites and web applications to be accomplished extremely quickly. It provides a large library of standard UI paradigms like horizontal navigation, button types and ? along with basic CSS and JavaScript to support them. Bootstrap is widely used by the developer community and it's not uncommon to see it's distinctive button style across the web. The new version of Bootstrap (3.0) is currently being developed but in order to ensure that the <span class="more"></span></p>
+			<p>Front-end (HTML and CSS) frameworks are commonly used in web applications for similar reasons to application frameworks; to provide easier collaboration between multiple developers and to provide more separation between design and functionality. For example a developer could build a complete application based only on wireframes before a designer builds on top of the framework with updated CSS styles. This is standard practice in industry and is the way that my application should be developed.</p>
+			<p>Twitter Bootstrap is an open source front-end development framework that allows for the basic structure of websites and web applications to be created extremely quickly. It provides a large library of standard UI components like horizontal navigation, buttons and dropdowns along with basic CSS and JavaScript to style elements like forms. Bootstrap is widely used by the developer community and it's not uncommon to see it's distinctive button style across the web. The new version of Bootstrap (3.0) is currently being developed but in order to ensure that Scoop is as up-to-date as it can be it will use the newest release candidate.</p>
 
 			<h3>Versioning</h3>
-			<p>In a project as complex as this one it's important to keep track of bugs that occur as well as being able to roll back to previous versions of the software. There are a variety of software packages available to facilitate this.</p>
-			<p>When working on web applications in the past I've used Subversion (svn), a versioning tool which has <span class="more"></span></p>
-			<p>Git is a versioning and Source Code Management (SCM) package which allows developers of applications to keep several revisions of their code. It is commonly used with Github, a web application (incidentally built on Ruby) which allows the publishing and sharing of Git repositories online in either a private or public way.</p>
+			<p>In a project as complex as this one it's important to keep track of bugs that occur as well as being able to roll back to previous versions of the software. There are a variety of software packages available to facilitate this process which is known as Source Code Management (SCM). This sort of software generally allows developers to commit changes as they are completed and to keep several revisions of their code in the form of branches, offshoots of a main projects direction. These branches can then be merged back into the master source once they are completed.</p>
+			<p>When working on web applications in the past I've used Subversion (svn), a versioning tool which has long been used amongst seasoned developers. Recently though Git has become more prevalent as it can be used with Github, a web application (incidentally built on Ruby) which allows the publishing and sharing of repositories online in either a private or public way. This public availability means that a lot of open source software is available on Github.</p>
+			<p>For this project I'll be using Git and GitHub so that the full source code of my project can be seen online.</p>
 		</section>
 
 		<section class="section" id="using-ruby-on-rails">
 			<h2>5.2 Using Ruby on Rails</h2>
-			<aside class="note pull-right">
-				<h2>Code repository</h2>
-				<p>The complete codebase of Scoop is available online through GitHub</p>
-				<a href="http://github.com/samlester/scoop">github.com/samlester/scoop</a>
-			</aside>
-			<p>Having decided that Ruby on Rails was the system that Scoop would be based upon I began researching and familiarising myself with the way that it works. This included following online tutorials from <a href="http://teamtreehouse.com/library/programming/build-a-simple-ruby-on-rails-application">Treehouse</a> and attending a <a href="https://generalassemb.ly/">General Assembly</a> workshop on getting started with Ruby</p>
-			<p><span class="more"></span></p>
+			<figure class="pull-right">
+				<img src="assets/images/implementation/code.jpg">
+				<figcaption>Figure 5-1: Developing with Rails.</figcaption>
+			</figure>
+			<p>Having decided that Ruby on Rails was the system that Scoop would be based upon I began researching and familiarising myself with the way that it works. This included following online tutorials from <a href="http://teamtreehouse.com/library/programming/build-a-simple-ruby-on-rails-application">Treehouse</a> and attending a <a href="https://generalassemb.ly/">General Assembly</a> workshop on getting started with Ruby.</p>
+			<p>During my initial explorations into Rails I encountered a lot of issues with using the system mainly because it's so different from the basis of other systems. I had to troubleshoot a number of issues while creating demo apps which eventually meant that I got a good grasp of the basics.</p>
+			<p>Rails can run locally on almost any computer and is mostly dealt with using the command line. Once installed it can be used to generate 'scaffolds', basic frameworks which can be used as a basic for creating a new application. The following command generates a scaffold consisting of a title with the string type and notes with the text type.</p>
+			<pre><code data-language="shell" data-line="1">$ rails generate scaffold title:string notes:text</code></pre>
+			<p>The scaffold consists of a controller, a model and a set of views which can be viewed after starting the server with the <code>rails s</code> command. These basic templates serve as a good way to get to know how Rails works, particularly when it comes to MVC.</p>
 
 			<h3>Model–view–controller (MVC)</h3>
-			<p>Model–view–controller (more commonly known as MVC) is a software architecture pattern which aims to separate the presentation of content to the user with the back-end logic that processes data <span class="cite"></span>. Each part of MVC has it's own role to play in responding to a user's requests:</p>
+			<p>Model–view–controller (more commonly known as MVC) is a software architecture pattern which aims to separate the presentation of content to the user with the back-end logic that processes data (Hartl, M., 2013, p. 25). Each part of MVC has it's own role to play in responding to a user's requests:</p>
 			<ul>
 				<li>Models contain the structure of the data within the application and the majority of the logic used to process data.</li>
 				<li>Views function only to present data to the user. They normally represent the interface of the application although the could be responsible for returning other formats.</li>
 				<li>Controllers bring the Models and Views together by fetching data from the Models and responding to user requests in the form of a View.</li>
 			</ul>
-			<p>Rails is entirely based around MVC <span class="more"></span>. One of the advantages of using Rails is that it can generate models, controllers and views from the command line. Together these components are called a scaffold and provide an extremely basic framework for passing data between the elements of MVC.</p>
+			<p>Rails is entirely based around MVC with the models, views and controllers all being found in the <a href="https://github.com/samlester/scoop/tree/master/app">app directory</a>. One of the key advantages of using Rails is that it can generate models, views and controllers from the command line as discussed above.</p>
 			
 			<h3>Gems</h3>
-			<p>Ruby uses a system of plugins called gems which allow developers to add additional functionality to their apps using <span class="cite"></span>. Rails is itself a gem as is the sqlite</p>
-			<p>Upon install Rails includes some gems by default including <code>sqlite3</code>, <code>jquery-rails</code> and a few others that manage asset functionality. The names of all the gems that a project can be found in the Gemfile. Upon running the <code>bundle install</code> command each gem is downloaded and installed.</p>
-			<p>In addition to the default set Scoop uses a variety of other gems which make certain tasks simpler.</p>
+			<p>Ruby uses a system of plugins called gems which allow developers to add additional functionality to their applications using open source projects available online. Rails is itself a gem as is <code>sqlite3</code> which is used for the local database.</p>
+			<p>Upon install Rails includes some gems by default including <code>sqlite3</code>, <code>jquery-rails</code> and a few others that manage asset functionality. The names of all the gems that a project can be found in the <a href="https://github.com/samlester/scoop/blob/master/Gemfile">Gemfile</a>. Upon running the <code>bundle install</code> command each gem is downloaded and installed.</p>
+			<p>In addition to the default set Scoop uses a variety of other gems which make certain tasks simpler:</p>
 			<table>
 				<thead>
 					<tr>
@@ -88,13 +87,13 @@
 						<td>robotex</td>
 						<td>Used to make anemone obey robots.txt when crawling sites</td>
 						<td><a href="https://github.com/chriskite/robotex">https://github.com/chriskite/robotex</a></td>
-						<td>Custom (Open source)</td>
+						<td>Open source</td>
 					</tr>
 					<tr>
 						<td>anemone</td>
-						<td>Used to </td>
+						<td>Used to find the pages on a given site</td>
 						<td><a href="https://github.com/chriskite/anemone">https://github.com/chriskite/anemone</a></td>
-						<td>Custom (Open source)</td>
+						<td>Open source</td>
 					</tr>
 					<tr>
 						<td>garb</td>
@@ -116,31 +115,25 @@
 					</tr>
 					<tr>
 						<td>omniauth</td>
-						<td><span class="more"></span></td>
+						<td>Used as a framework for connecting to Google Analytics</td>
 						<td><a href="https://github.com/intridea/omniauth">https://github.com/intridea/omniauth</a></td>
-						<td>Custom (Open source)</td>
+						<td>Open source</td>
 					</tr>
 					<tr>
 						<td>omniauth-google-oauth2</td>
-						<td><span class="more"></span></td>
+						<td>Used as a framework for connecting to Google Analytics</td>
 						<td><a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a></td>
-						<td>Custom (Open source)</td>
+						<td>Open source</td>
 					</tr>
 					<tr>
 						<td>delayed_job_active_record</td>
-						<td><span class="more"></span></td>
+						<td>Used to queue jobs for background processing</td>
 						<td><a href="https://github.com/collectiveidea/delayed_job_active_record">https://github.com/collectiveidea/delayed_job_active_record</a></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>daemons</td>
-						<td><span class="more"></span></td>
-						<td><a href="https://github.com/ghazel/daemons">https://github.com/ghazel/daemons</a></td>
-						<td>Custom (Open source)</td>
+						<td>Open source</td>
 					</tr>
 					<tr>
 						<td>google_visualr</td>
-						<td></td>
+						<td>Wrapper for the Google Charts API</td>
 						<td><a href="https://github.com/winston/google_visualr">https://github.com/winston/google_visualr</a></td>
 						<td>MIT</td>
 					</tr>
@@ -150,15 +143,22 @@
 
 		<section class="section" id="using-git">
 			<h2>5.3 Using Git</h2>
-			<p>Git allow the project to exist <span class="more"></span>. GitHub provides a GUI client for their service but for the duration of the project the command line will be used for all actions. After browsing to the required folder using <code>cd</code> a new git repository can be set up using <code>git init</code> and the project files can be added using <code>git add .</code></p>
-			<pre>Code.</pre>
-			<p>At various times during the project it's been necessary to </p>
+			<aside class="note pull-right">
+				<h2>Code repository</h2>
+				<p>The complete codebase of Scoop is available online through GitHub</p>
+				<a href="http://github.com/samlester/scoop">github.com/samlester/scoop</a>
+			</aside>
+			<p>Git allows the project files to exist online via Github and in multiple versions so that they can be rolled back to previous iterations if necessary. GitHub provides a GUI client for their service but for the duration of the project the command line will be used for all actions. After browsing to the required folder using <code>cd</code> a new git repository can be set up using <code>git init</code> and the project files can be added using <code>git add</code>.</p>
 		</section>
 
 		<section class="section" id="creating-and-updating-the-database">
 			<h2>5.4 Creating and updating the database</h2>
-			<p>Rather than creating a database structure and then implementing it using a Database Management System (DBMS) as is standard when creating a system using PHP and MySQL Rails uses models to store information about the name, content and validation of various fields. <span class="cite"></span> The information from the models can then be implemented into any database system using a migration. Scoop uses the standard Rails system, SQLite. <span class="more"></span></p>
-			<p>Prior to creating the database</p>
+			<aside class="note pull-right">
+				<h2>Coding resources</h2>
+				<p>The sources that I used while coding the application and troubleshooting problems can be found in the appendix</p>
+				<a href="<!-- @path appendix/coding-resources.html -->">Coding resources</a>
+			</aside>
+			<p>Rather than creating a database structure and then implementing it using a Database Management System (as is standard when creating a system using PHP and MySQL) Rails uses models to store information about the name, content and validation of various fields. The information from the models can then be implemented into any database system using a migration. Scoop uses the standard Rails database system, SQLite3.</p>
 			<p>Changes to the database were made using individual migrations like the one below:</p>
 			<pre><code data-language="ruby" data-line="1">class AddCrawlStatusToSites < ActiveRecord::Migration
   def change
@@ -167,7 +167,7 @@
 end</code></pre>
 			<p>This simple migration adds a new column (crawling) to the sites table with the boolean type. The changes outlined in the migration can then be made to the database using this command:</p>
 			<pre><code data-language="shell" data-line="1">$ rake db:migrate</code></pre>
-			<p>At any time the complete database structure can be found in the <a href="https://github.com/samlester/scoop/blob/master/db/schema.rb">db/schema.rb</a> file. The code below is a shortened version of the file showing the create command for the sites</p>
+			<p>At any time the complete database structure can be found in the <a href="https://github.com/samlester/scoop/blob/master/db/schema.rb">db/schema.rb</a> file. The code below is a shortened version of the file showing the create command for the sites table:</p>
 			<pre><code data-language="ruby" data-line="1">ActiveRecord::Schema.define(:version => 20130409221522) do
 
 	create_table "sites", :force => true do |t|
@@ -187,18 +187,11 @@ end</code></pre>
 	...
 
 end</code></pre>
-			<p>This extensive file describes all of the tables in the database similar to an SQL create file.</p>
-
-
 		</section>
 
 		<section class="section" id="crawl-functionality">
 			<h2>5.5 Crawl functionality</h2>
-			<p>The ability of the application to crawl a website is key to it's overall purpose and so it was one of the first pieces of functionality to be created.</p>
-			<figure>
-				<img src="http://i.ten4design.co.uk/1000x200&text=Crawl process">
-				<figcaption>Crawl process</figcaption>
-			</figure>
+			<p>The ability of the application to crawl a website is key to it's overall purpose and so it was one of the first pieces of functionality to be created. I initially created this same functionality as a simple Ruby script then began building it into the Rails system as I learned more about how to manipulate the database.</p>
 			<p>Scoop's crawl functionality utilises four gems; <code>anemone</code> to retrieve the URLs for the site; <code>robotex</code> to obey the robots.txt protocol; <code>nokogiri</code> to parse the document and <code>delayed_job_active_record</code> to store background jobs in the database and run them when required.</p>
 			<p>The crawl process begins at the point where the user enters the site name and url. When the form is submitted it calls the create method in the site controller:</p>
 			<pre><code data-language="ruby" data-line="1">def create
@@ -225,18 +218,18 @@ end</code></pre>
     end
   end
 end</code></pre>
+			<p>The create method performs the following actions:</p>
 			<ol>
 				<li>The POST data from the form is retrieved an placed inside the <code>@site</code> object.</li>
 				<li>The current user's id and crawl status are added to the object.</li>
-				<li>The site's homepage HTML is retrieved using <code>open</code> and prepared for <code>nokogiri</code>.</li>
+				<li>The site's homepage HTML is retrieved using <code>open</code> and prepared for <code>nokogiri</code> (The Bastards Book of Ruby, 2011).</li>
 				<li>A conditional statement checks if the page has an Apple touch icon. If so, it is retrieved and attached to the site object. If not, <code>nil</code> is entered instead.</li>
 				<li><code>@site</code> is saved if the method was executed successfully.</li>
 				<li><code>@site</code> is passed to the crawl method.</li>
 				<li>The site view is returned with a notification message.</li>
 			</ol>
-			<p>At this point the user sees the site page with a progress indicator. The site is now in a queue to be processed using Delayed Job. The version of delayed job used in Scoop puts the queued items into a database table where they can be accessed by other methods without action from the user.</p>
+			<p>At this point the user sees the site overview page with a progress indicator. The site is now in a queue to be processed using Delayed Job. The version of Delayed Job used in Scoop (<code>delayed_job_active_record</code>) puts the queued items into a database table where they can be accessed by other methods without action from the user.</p>
 			<p>The crawl method exists within the site model and is carried out as a background task:</p>
-
 			<pre><code data-language="ruby" data-line="1">def crawl
   Anemone.crawl(url) do |anemone|
     anemone.on_every_page do |page|
@@ -256,6 +249,7 @@ end</code></pre>
   @site.save!
 end
 handle_asynchronously :crawl</code></pre>
+			<p>The crawl method performs the following tasks:</p>
 			<ol>
 				<li><code>Anemone</code> is called and passed the url of the site to be crawled.</li>
 				<li>Each page on the site is retrieved using <code>open</code> and prepared for <code>nokogiri</code>.</li>
@@ -264,20 +258,16 @@ handle_asynchronously :crawl</code></pre>
 				<li>The retrieved information is saved to the pages table in the database.</li>
 				<li>If HTTP errors are encountered (e.g. 404: Page not found, 401: Unauthorized) the page is skipped.</li>
 			</ol>
-			<p>The crawl method is set to be run asynchronously using <code>handle_asynchronously :crawl</code>. This setup of Delayed Job allows almost any ruby method to be handled in the background without significant changes to the code.</p>
+			<p>The crawl method is set to be run asynchronously using <code>handle_asynchronously :crawl</code>. This setup of Delayed Job allows almost any method to be handled in the background without significant changes to the code so I was able to develop the crawl functionality first and then implement it as a background task.</p>
 		</section>
 
 		<section class="section" id="connecting-to-google-analytics">
 			<h2>5.6 Connecting to Google Analytics</h2>
-			<p>Originally the retrieval of Google Analytics data for each page was listed as a feature which was marked as nice to have rather than essential. As the project moved forward it became clear that analytical data about the page would be key in the user's decisions about how to categorise and comment on the content.</p>
-			<p>Google exposes it's API data after authentication through OAuth, an open source protocol created to make it simpler for developers to complete user authorisation processes so they can get access to data over HTTP <span class="cite"></span>.</p>
+			<p>Originally the retrieval of Google Analytics data for each page was listed as a feature which was nice to have rather than essential. As the project moved forward it became clear that analytical data about the page would be key in the user's decisions about how to categorise and comment on the content. To get the data from Google I use the Google Analytics API.</p>
+			<p>Google exposes it's API data after authentication through OAuth, an open source protocol created to make it simpler for developers to complete user authorisation processes so they can get access to data over HTTP (Leiba, B., 2012, p. 74-77).</p>
 			<p>Getting data in this way is a fairly involved process, requiring first an authentication stage where the user can confirm their details and grant privileges followed by token retrieval and finally calls to get the actual data for each page. To simplify the process Scoop uses four gems; <code>omniauth</code> and <code>omniauth-google-oauth2</code> for making the OAuth calls, <code>garb</code> for retrieving the analytics data and <code>delayed_job</code> for the background tasks.</p>
-			<figure>
-				<img src="">
-				<figcaption>The connection view</figcaption>
-			</figure>
-			<p>With Google's integration of the OAuth 2 standard the first step is to register an application using their <a href="#">API console</a> which controls external access to all of Google's services. Scoop was registered as requiring access to the Google Analytics API and was assigned an OAuth key and secret to use during the authentication process.</p>
-			<p>When a user <span class="more"></span></p>
+			<p>With Google's integration of the OAuth 2 standard the first step is to register an application using their <a href="https://code.google.com/apis/console">API console</a> which controls external access to all of Google's services. Scoop was registered as requiring access to the Google Analytics API and was assigned an OAuth key and secret to use during the authentication process.</p>
+			<p>When a user begins the authentication process by clicking on the 'Connect Google Analytics' button they are immediately taken to the Google app authorisation page or asked to login if they aren't already. If the user grants Scoop access privileges they are redirected to the the new connection method:</p>
 			<pre><code data-language="ruby" data-line="1">def new
   omniauth = request.env["omniauth.auth"]
   site_id = request.env["omniauth.params"]['site_id']
@@ -304,6 +294,7 @@ handle_asynchronously :crawl</code></pre>
     format.json { render json: @connection }
   end
 end</code></pre>
+			<p>The new method performs the following actions:</p>
 			<ol>
 				<li>The data returned from Google is stored in a variable along with the site ID.</li>
 				<li>The <code>@connection</code> object is created.</li>
@@ -313,8 +304,7 @@ end</code></pre>
 				<li>The user's Google analytics accounts are retrieved and stored in the <code>@accounts</code> object.</li>
 				<li>The view is sent to the user.</li>
 			</ol>
-			<p>After the user has authenticated with Google they are sent to a page so they can select a Google Analytics profile to assoacite the Scoop project to. While this process could potentially be carried out automatically it would rely heavily on assumptions about the user's Google Analytics setup. <span class="more"></span></p>
-			<p>After the user has selected a profile the connection is saved to the database and a background method is called in the same way as with the initial site crawl above. While the analytics data request doesn't take as long as the site crawl it's good practice to run any task that accesses and external service in the background as <span class="more"></span> <span class="cite"></span></p>
+			<p>The view allows the user to select a Google Analytics profile to associate the Scoop project with. Once they've selected a profile and submitted the form the new connection is saved to the database and a background method is called in the same way as with the initial site crawl above. While the analytics data request doesn't take as long as the site crawl it's good practice to run any task that accesses an external service in the background otherwise a failure on the remote server could cause problems with Scoop.</p>
 			<pre><code data-language="ruby" data-line="1">def get_data
   @pages = Page.where("site_id = ?", site_id)
   
@@ -337,6 +327,7 @@ end</code></pre>
   end  
 end
 handle_asynchronously :get_data</code></pre>
+			<p>The get_data method runs in the background and performs the following actions:</p>
 			<ol>
 				<li>The set of pages to get data for is retrieved using a database query and saved to the <code>@pages</code> object.</li>
 				<li>A new authorisation request is created using the application's key and secret along with the user's refresh token.</li>
@@ -348,10 +339,10 @@ handle_asynchronously :get_data</code></pre>
 			<p>Data is retrieved per page and is available to the user as soon as the call is complete.</p>
 		</section>
 	
-		<section class="section" id="google-charts">
-			<h2>5.7 Google Charts</h2>
-			<p>Graphs and charts tend to convey data in a much more engaging way than text so ..</p>
-			<p>Creating charts for the web using dynamic data is a speicalised task so prior to development I spent some time searching for a charting library that would fit the requirements of the application. Scoop uses the Google Chart library through a Ruby gem called <code>google_visualr</code> which acts as an interface to the javascript based. This solution was chosen because it allowed for all the chart generation code to be written in the Ruby-based controller rather than having to pass data through to a front-end script.</p>
+		<section class="section" id="implementing-google-charts">
+			<h2>5.7 Implementing Google Charts</h2>
+			<p>Graphs and charts tend to convey data in a much more engaging way than text so I decided that it was important to include them, if only to make the user experience more interesting. In the application charts are used for the progress breakdown on the site overview page and the pie chart on the report page.</p>
+			<p>Creating charts for the web using dynamic data is a fairly specialised task so prior to development I spent some time searching for a charting library that would fit the requirements of the application. Scoop uses the Google Chart library through a Ruby gem called <code>google_visualr</code> which acts as an interface to the JavaScript based API. This solution was chosen because it allowed for all the chart generation code to be written in the Ruby-based controller rather than having to pass data through to a front-end script.</p>
 			<p>The following code sample is used to generate the progress-bar style chart on the sites page of Scoop. It shows a breakdown of the content status of each page and exists in the sites controller:</p>
 			<pre><code data-language="ruby" data-line="1">@pages = Page.where("site_id = ?", params[:id])
 
@@ -386,19 +377,29 @@ options = {
 }
 
 @chart = GoogleVisualr::Interactive::BarChart.new(chart_data, options)</code></pre>
+			<p>Creating the chart requires the following actions:</p>
 			<ol>
 				<li>The pages on the current site are retrieved from the database.</li>
 				<li>A new instance of the <code>GoogleVisualr::DataTable</code> method is initialised and assigned to the <code>chart_data</code> variable.</li>
 				<li>Six columns are added to the table for each of the values we want displayed on the chart.</li>
 				<li>A row is added and values are assigned to each cell using a database query.</li>
 				<li>Options for how the chart is to be displayed are added to a variable called <code>options</code>. This includes the placement of the chart, visible axis and colours.</li>
-				<li>The bar chart is generated using <code>chart_data</code> and <code>options</code> variables and save to the chart object.</li>
+				<li>The bar chart is generated using <code>chart_data</code> and <code>options</code> variables and saved to the chart object.</li>
 			</ol>
+			<p>The chart object is called from the view to display the chart.</p>
 		</section>
 
-		<section class="section" id="#">
-			<h2>5.8 Conclusion</h2>
-			<p>Hello.</p>
+		<section class="section" id="#product-demo">
+			<h2>5.8 Product demo</h2>
+			<p>To showcase the completed product I created a short video which shows how common tasks can be carried out. A full set of screenshots is also available in the <a href="<!-- @path appendix -->">appendix</a>.</p>
+			<figure>
+				<video controls autobuffer>
+					<source src="assets/videos/demo/demo.mp4" type="video/mp4" />
+					<source src="assets/videos/demo/demo.webm" type="video/webm" />
+					<source src="assets/videos/demo/demo.ogv" type="video/ogg" />	
+				</video>
+				<figcaption>Figure 5-2: Scoop product demo<br/><em>If this video doesn't work in your browser the files are available in /video</em></figcaption>
+			</figure>
 		</section>
 		
 		<a class="next-part" href="<!-- @path testing.html -->">Chapter 6: Testing</a>
