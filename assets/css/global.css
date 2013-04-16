@@ -123,9 +123,8 @@ figure.pull-left, figure.pull-right {width: 50%; margin-top: 0;}
 .image-grid img {z-index: 0; width: 20%; float:left;}
 .image-grid img:hover {z-index: 999;-webkit-transform: scale(1.7); -moz-transform: scale(1.7); -ms-transform: scale(1.7); -o-transform: scale(1.7); transform: scale(1.7);}
 
-.cite {background-color: red; display: inline-block; height: 10px; width: 10px;}
-.more {background-color: green; display: inline-block; height: 10px; width: 10px;}
-.revise {background-color: yellow;}
+.cite, .more {display:none;}
+.revise {}
 
 q:before {content: "\201C";}
 q:after {content: "\201D";}
